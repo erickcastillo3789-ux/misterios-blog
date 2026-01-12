@@ -1,0 +1,15 @@
+{
+  "name": "Misterios y Realidades Blog",
+  "short_name": "Misterios",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1155/1155230.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

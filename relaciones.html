@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones: El Arte de Entenderse | Blog</title>
+    <style>
+        :root {
+            --primario: #1a1a2e;
+            --acento: #ff4d6d; /* Rosa intenso para relaciones */
+            --fondo-suave: #fff0f3;
+            --texto: #2d3436;
+        }
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: var(--texto); margin: 0; background: #fff; }
+        nav { padding: 15px; background: var(--primario); }
+        nav a { color: white; text-decoration: none; font-family: sans-serif; font-weight: bold; }
+        .header-articulo { max-width: 800px; margin: 40px auto 20px auto; padding: 0 20px; }
+        .categoria-tag { color: var(--acento); text-transform: uppercase; font-family: sans-serif; font-weight: 800; font-size: 0.9rem; }
+        h1 { font-size: 2.5rem; line-height: 1.1; margin: 10px 0; font-family: sans-serif; color: #c9184a; }
+        .imagen-destacada { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 30px; border-bottom: 5px solid var(--acento); }
+        .contenido { max-width: 700px; margin: auto; padding: 0 20px 60px 20px; font-size: 1.2rem; }
+        .destacado { background: var(--fondo-suave); padding: 20px; border-left: 5px solid var(--acento); font-style: italic; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">← Volver al inicio</a></nav>
+    <article>
+        <div class="header-articulo">
+            <span class="categoria-tag">Psicología y Pareja</span>
+            <h1>¿Por qué nos cuesta tanto entendernos?</h1>
+            <p style="color: #636e72; font-family: sans-serif;">Por Redacción • 12 de Enero, 2026</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" class="imagen-destacada">
+        <div class="contenido">
+            <p>A menudo escuchamos que hombres y mujeres "hablan idiomas diferentes". Aunque compartimos el mismo vocabulario, nuestras prioridades al comunicar emociones suelen seguir patrones distintos aprendidos a lo largo de los años.</p>
+            
+            <div class="destacado">
+                "La clave no es pensar igual, sino aprender a escuchar lo que el otro realmente está intentando decir tras sus palabras."
+            </div>
+
+            <p>Entender estas dinámicas no se trata de ganar una discusión, sino de construir puentes de empatía. En este artículo exploramos cómo la comunicación asertiva puede transformar una relación de conflicto en una de apoyo mutuo.</p>
+        </div>
+    </article>
+    <style>
+  /* Solo cambia colores si el 'body' tiene la clase 'dark-mode' */
+  body.dark-mode { background-color: #121212 !important; color: white !important; }
+  .dark-mode .card, .dark-mode section, .dark-mode nav { background-color: #1e1e1e !important; color: white !important; }
+  .dark-mode h1, .dark-mode h2, .dark-mode .categoria-tag { color: #bb86fc !important; }
+</style>
+
+<button onclick="document.body.classList.toggle('dark-mode')" 
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px; border-radius: 50%; border: none; background: #6366f1; color: white; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+  🌓
+</button>
+<button onclick="toggleOSCURO()" 
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px; border-radius: 50%; border: none; background: #6366f1; color: white; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+  🌓
+</button>
+
+<script>
+    const body = document.body;
+
+    // Al cargar la página, revisa si el modo oscuro estaba activo antes
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    function toggleOSCURO() {
+        body.classList.toggle('dark-mode');
+        
+        // Guarda la elección del usuario para la siguiente página
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

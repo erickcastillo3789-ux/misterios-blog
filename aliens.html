@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Estamos Solos? | Blog</title>
+    <style>
+        :root {
+            --primario: #1a1a2e;
+            --acento: #9d4edd; /* Morado para el espacio */
+            --texto: #2d3436;
+        }
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: var(--texto); margin: 0; background: #fff; }
+        nav { padding: 15px; background: var(--primario); }
+        nav a { color: white; text-decoration: none; font-family: sans-serif; font-weight: bold; }
+        .header-articulo { max-width: 800px; margin: 40px auto 20px auto; padding: 0 20px; }
+        .categoria-tag { color: var(--acento); text-transform: uppercase; font-family: sans-serif; font-weight: 800; font-size: 0.9rem; }
+        h1 { font-size: 2.5rem; line-height: 1.1; margin: 10px 0; font-family: sans-serif; }
+        .imagen-destacada { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 30px; }
+        .contenido { max-width: 700px; margin: auto; padding: 0 20px 60px 20px; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">← Volver al inicio</a></nav>
+    <article>
+        <div class="header-articulo">
+            <span class="categoria-tag">Astrobiología</span>
+            <h1>Señales en el espacio: ¿Estamos solos?</h1>
+            <p style="color: #636e72; font-family: sans-serif;">Por Redacción • 12 de Enero, 2026</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80" class="imagen-destacada">
+        <div class="contenido">
+            <p>La inmensidad del universo sugiere que las probabilidades de que la Tierra sea el único hogar para la vida son casi nulas. Con la tecnología actual, estamos escaneando miles de exoplanetas en busca de lo que llamamos "firmas biológicas".</p>
+            <p>¿Es posible que civilizaciones antiguas hayan dejado rastros que aún no podemos comprender? La ciencia moderna se enfoca ahora en las lunas de Júpiter y Saturno, donde océanos subterráneos podrían albergar microorganismos extraterrestres.</p>
+        </div>
+    </article>
+    <style>
+  /* Solo cambia colores si el 'body' tiene la clase 'dark-mode' */
+  body.dark-mode { background-color: #121212 !important; color: white !important; }
+  .dark-mode .card, .dark-mode section, .dark-mode nav { background-color: #1e1e1e !important; color: white !important; }
+  .dark-mode h1, .dark-mode h2, .dark-mode .categoria-tag { color: #bb86fc !important; }
+</style>
+
+<button onclick="document.body.classList.toggle('dark-mode')" 
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px; border-radius: 50%; border: none; background: #6366f1; color: white; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+  🌓
+</button>
+<button onclick="toggleOSCURO()" 
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px; border-radius: 50%; border: none; background: #6366f1; color: white; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+  🌓
+</button>
+
+<script>
+    const body = document.body;
+
+    // Al cargar la página, revisa si el modo oscuro estaba activo antes
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    function toggleOSCURO() {
+        body.classList.toggle('dark-mode');
+        
+        // Guarda la elección del usuario para la siguiente página
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
