@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misterios y Realidades | Blog</title>
+    <style>
+        :root {
+            --primario: #1a1a2e; /* Azul noche profundo */
+            --acento-mar: #0077b6;
+            --acento-espacio: #9d4edd;
+            --acento-relaciones: #ff4d6d;
+            --fondo: #f4f7f6;
+            --texto: #2d3436;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: var(--fondo);
+            color: var(--texto);
+        }
+
+        header {
+            background: var(--primario);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--acento-espacio);
+        }
+.navbar {
+    position: sticky; /* Esto la mantiene fija al bajar */
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primario); /* Usamos tu azul noche */
+    padding: 5px 10px;
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-logo { color: white; font-weight:font-size: 0.9rem; bold; }
+.nav-logo span { color: var(--acento-espacio); } /* Un toque de color */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+        .categorias-blog {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        /* Colores por tema */
+        .tag.relaciones { background: var(--acento-relaciones); }
+        .tag.espacio { background: var(--acento-espacio); }
+        .tag.mar { background: var(--acento-mar); }
+
+        .feed {
+            max-width: 600px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:active { transform: scale(0.98); }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body { padding: 20px; }
+
+        .card-meta {
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .meta-relaciones { color: var(--acento-relaciones); }
+        .meta-espacio { color: var(--acento-espacio); }
+        .meta-mar { color: var(--acento-mar); }
+
+        h2 { margin: 0 0 10px 0; font-size: 1.5rem; line-height: 1.2; }
+        p { color: #636e72; line-height: 1.5; font-size: 0.95rem; }
+
+        .leer-mas {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primario);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Ajustes automáticos para pantallas pequeñas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem !important; /* Título principal más pequeño */
+    }
+    
+    header p {
+        font-size: 0.8rem !important;
+    }
+
+    .navbar {
+        flex-direction: column; /* Apila el logo y los links si es muy pequeño */
+        gap: 5px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .card h2 {
+        font-size: 1rem !important; /* Títulos de artículos más cortos */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Misterios y Realidades</h1>
+        <p>Desde el abismo marino hasta los confines del cosmos.</p>
+    </header>
+<nav class="navbar">
+    <div class="nav-logo">Misterios<span>Blog</span></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="aliens.html">Aliens</a></li>
+        <li><a href="articulo.html">El Mar</a></li>
+        <li><a href="relaciones.html">Relaciones</a></li>
+    </ul>
+</nav>
+
+    <div class="categorias-blog">
+        <span class="tag relaciones">Relaciones</span>
+        <span class="tag espacio">Vida Alienígena</span>
+        <span class="tag mar">Abismo Marino</span>
+    </div>
+
+    <main class="feed">
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" class="card-img">
+            <div class="card-body">
+                <span class="card-meta meta-relaciones">PSICOLOGÍA Y PAREJA</span>
+                <h2>¿Por qué nos cuesta tanto entendernos?</h2>
+                <p>Las diferencias en la comunicación entre hombres y mujeres analizadas desde la neurociencia y la empatía moderna.</p>
+                <a href="relaciones.html" class="leer-mas">Leer artículo →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80" class="card-img">
+            <div class="card-body">
+                <span class="card-meta meta-espacio">ASTROBIOLOGÍA</span>
+                <h2>Señales en el espacio: ¿Estamos solos?</h2>
+                <p>Nuevos hallazgos en exoplanetas sugieren que las condiciones para la vida podrían ser más comunes de lo que pensábamos.</p>
+                <a href="aliens.html" class="leer-mas">Leer artículo →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=600&q=80" class="card-img">
+            <div class="card-body">
+                <span class="card-meta meta-mar">OCEANOGRAFÍA</span>
+                <h2>Criaturas del Abismo: Lo que oculta la Fosa de las Marianas</h2>
+                <p>Descubre a los seres que viven bajo una presión extrema y en oscuridad total. Curiosidades que parecen de otro planeta.</p>
+                <a href="articulo.html" class="leer-mas">Leer artículo →</a>
+            </div>
+        </article>
+    </main>
+<section style="background-color: #f0f2f5; padding: 40px 20px; margin-top: 40px;">
+    <div style="max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h3 style="text-align: center; color: #1a1a2e;">¿Tienes una teoría o sugerencia?</h3>
+        <p style="text-align: center; color: #636e72;">Escríbeme para hablar sobre nuevos misterios.</p>
+        
+        <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! (Simulado)');">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Tu nombre:</label>
+            <input type="text" placeholder="Ej. Juan Pérez" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Tu mensaje:</label>
+            <textarea placeholder="Cuéntame sobre qué te gustaría leer..." style="width: 100%; padding: 12px; height: 100px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 20px;"></textarea>
+            
+            <button type="submit" style="width: 100%; padding: 15px; background: #6366f1; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+<style>
+  /* 1. Fondo y texto general */
+  body.dark-mode { 
+      background-color: #121212 !important; 
+      color: #ffffff !important; 
+  }
+
+  /* 2. Tarjetas y secciones */
+  .dark-mode .card, 
+  .dark-mode section, 
+  .dark-mode .card-body,
+  .dark-mode nav { 
+      background-color: #1e1e1e !important; 
+      color: #ffffff !important; 
+  }
+
+  /* 3. ARREGLO DE LETRAS INVISIBLES (Enlaces y párrafos) */
+  .dark-mode a, 
+  .dark-mode .leer-mas, 
+  .dark-mode p, 
+  .dark-mode h2 { 
+      color: #ffffff !important; 
+  }
+
+  /* 4. Títulos resaltados */
+  .dark-mode h1, 
+  .dark-mode .categoria-tag { 
+      color: #bb86fc !important; 
+  }
+</style>
+
+<button onclick="toggleOSCURO()" 
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px; border-radius: 50%; border: none; background: #6366f1; color: white; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+  🌓
+</button>
+
+<script>
+    const body = document.body;
+
+    // Al cargar la página, revisa si el modo oscuro estaba activo antes
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    function toggleOSCURO() {
+        body.classList.toggle('dark-mode');
+        
+        // Guarda la elección del usuario para la siguiente página
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+
+</body>
+</html>
